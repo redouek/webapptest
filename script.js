@@ -1,20 +1,16 @@
-const form = document.querySelector('form');
-const respostaElement = document.querySelector('#resposta');
+const urlParams = new URLSearchParams(window.location.search);
+const numero1 = parseInt(urlParams.get("numero1"));
+const numero2 = parseInt(urlParams.get("numero2"));
+const numero3 = parseInt(urlParams.get("numero3"));
+const numero4 = parseInt(urlParams.get("numero4"));
+const numero5 = parseInt(urlParams.get("numero5"));
 
-form.addEventListener('submit', (event) => {
-    event.preventDefault();
+const soma = numero1 + numero2 + numero3 + numero4 + numero5;
 
-    const numero1 = parseInt(document.querySelector('#numero1').value);
-    const numero2 = parseInt(document.querySelector('#numero2').value);
-    const numero3 = parseInt(document.querySelector('#numero3').value);
-    const numero4 = parseInt(document.querySelector('#numero4').value);
-    const numero5 = parseInt(document.querySelector('#numero5').value);
+const resultadoElement = document.getElementById("resultado");
 
-    const soma = numero1 + numero2 + numero3 + numero4 + numero5;
-
-    if (soma < 50) {
-        respostaElement.textContent = "Boca seca";
-    } else {
-        respostaElement.textContent = "Salivação normal";
-    }
-});
+if (soma < 50) {
+    resultadoElement.textContent = "Boca seca";
+} else {
+    resultadoElement.textContent = "Salivação normal";
+}
