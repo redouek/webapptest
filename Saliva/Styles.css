@@ -1,0 +1,32 @@
+/* Estilos para o corpo do site */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos para a barra fixa no topo */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img {
+    height: 40px;
+}
+
+/* Estilos para o conteúdo principal */
+main {
+    padding: 20px;
+    margin-top: 70px; /* Para evitar sobreposição com a barra fixa no topo */
+}
+
+/* Outros estilos conforme necessário */
