@@ -44,3 +44,39 @@ document.getElementById("cadastroForm").addEventListener("submit", function(even
     // Limpa o formulário após o envio
     this.reset();
 });
+
+// Função para análise dos resultados do teste salivar
+function analisarResultados() {
+    // Coleta dos dados inseridos pelo usuário
+    const fluxoNaoEstimuladoResultado = parseFloat(document.getElementById("fluxoNaoEstimuladoResultado").value);
+    const phResultado = parseFloat(document.getElementById("phResultado").value);
+    const fluxoEstimuladoResultado = parseFloat(document.getElementById("fluxoEstimuladoResultado").value);
+    const capacidadeTampaoResultado = parseFloat(document.getElementById("capacidadeTampaoResultado").value);
+    const examesComplementaresResultado = parseFloat(document.getElementById("examesComplementaresResultado").value);
+
+    // Análise dos resultados
+    const resultados = [];
+    if (fluxoNaoEstimuladoResultado <= 0.1) {
+        resultados.push("Hipossalivação");
+    } else if (fluxoNaoEstimuladoResultado >= 0.3 && fluxoNaoEstimuladoResultado <= 0.4) {
+        resultados.push("Normal");
+    }
+
+    if (phResultado >= 6 && phResultado <= 6.8) {
+        resultados.push("Normal");
+    } else if (phResultado >= 7.54 && phResultado <= 10.12) {
+        resultados.push("Caso de gengivite");
+    } else if (phResultado >= 9.39 && phResultado <= 13.91) {
+        resultados.push("Caso de periodontite");
+    }
+
+    // Adicione as outras análises de acordo com as especificações
+
+    // Exibição dos resultados
+    alert("Resultados do teste salivar:\n\n" + resultados.join("\n"));
+}
+
+// Evento de envio do formulário
+document.getElementById("testeSalivaForm").addEventListener("submit", function(event) {
+   
+
