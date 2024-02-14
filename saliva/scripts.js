@@ -134,3 +134,27 @@ document.getElementById("botaoSair").addEventListener("click", function() {
 
 // Chamada inicial para atualizar a barra de navegação com base no estado de login atual
 atualizarBarraNavegacao(usuarioLogado);
+// Evento de envio do formulário de cadastro
+document.getElementById("cadastroForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Impede o envio padrão do formulário
+
+    // Coleta dos dados do formulário
+    const nome = document.getElementById("nome").value;
+    const sobrenome = document.getElementById("sobrenome").value;
+    // Coleta dos outros campos de cadastro conforme necessário
+
+    // Simulação de envio de e-mail com link para gerar senha (substitua pela sua lógica real)
+    enviarEmailGerarSenha(nome, sobrenome);
+
+    // Limpa o formulário após o envio
+    this.reset();
+});
+
+// Função para enviar e-mail com link para gerar senha
+function enviarEmailGerarSenha(nome, sobrenome) {
+    const email = nome.toLowerCase() + "." + sobrenome.toLowerCase() + "@example.com"; // Geração de e-mail fictício
+    const linkGerarSenha = "https://seuwebapp.com/gerar_senha?email=" + encodeURIComponent(email);
+
+    // Simulação de envio de e-mail (exibido apenas para fins de demonstração)
+    alert("Um e-mail foi enviado para " + email + " com um link para gerar a senha.");
+}
