@@ -187,3 +187,8 @@ function finalizarCadastro(cpf, senha) {
     // Redireciona para a página de login após finalizar o cadastro
     window.location.href = "login.html";
 }
+// Evento de clique no botão "Iniciar Teste"
+document.getElementById("iniciarTesteBtn").addEventListener("click", function() {
+    // Redireciona para a página "Teste Saliva PRO"
+    window.location.href = "teste_saliva_pro.html";
+});
