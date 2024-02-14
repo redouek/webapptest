@@ -158,3 +158,32 @@ function enviarEmailGerarSenha(nome, sobrenome) {
     // Simulação de envio de e-mail (exibido apenas para fins de demonstração)
     alert("Um e-mail foi enviado para " + email + " com um link para gerar a senha.");
 }
+// Evento de envio do formulário de gerar senha
+document.getElementById("gerarSenhaForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Impede o envio padrão do formulário
+
+    // Coleta dos dados do formulário
+    const cpf = document.getElementById("cpf").value;
+    const senha = document.getElementById("senha").value;
+    const confirmarSenha = document.getElementById("confirmarSenha").value;
+
+    // Verifica se as senhas coincidem
+    if (senha !== confirmarSenha) {
+        alert("As senhas não coincidem. Por favor, tente novamente.");
+        return;
+    }
+
+    // Verifica se a senha atende aos critérios de segurança (ao menos 8 caracteres, um caractere especial, letras maiúsculas e minúsculas)
+
+    // Simulação de finalização do cadastro (substitua pela sua lógica real)
+    finalizarCadastro(cpf, senha);
+});
+
+// Função para finalizar o cadastro do usuário
+function finalizarCadastro(cpf, senha) {
+    // Simulação de armazenamento das informações do usuário (exibido apenas para fins de demonstração)
+    alert("Cadastro finalizado com sucesso!\nCPF: " + cpf + "\nSenha: " + senha);
+
+    // Redireciona para a página de login após finalizar o cadastro
+    window.location.href = "login.html";
+}
