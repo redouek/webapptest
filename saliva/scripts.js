@@ -90,3 +90,47 @@ document.getElementById("testeSalivaForm").addEventListener("submit", function(e
     this.reset();
 });
 
+// Evento de envio do formulário de login
+document.getElementById("loginForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Impede o envio padrão do formulário
+
+    // Simulação de login bem-sucedido (substitua esta lógica pela autenticação real)
+    const cpf = document.getElementById("cpf").value;
+    const senha = document.getElementById("senha").value;
+
+    if (cpf === "12345678900" && senha === "senha123") { // Exemplo de CPF e senha
+        alert("Login bem-sucedido!");
+        window.location.href = "dashboard.html"; // Redireciona para a página de Dashboard
+    } else {
+        alert("CPF ou senha incorretos. Por favor, tente novamente.");
+    }
+});
+
+                                                            // Função para atualizar a barra de navegação com base no estado de login do usuário
+function atualizarBarraNavegacao(usuarioLogado) {
+    const barraNavegacao = document.getElementById("barraNavegacao");
+    const saudacaoUsuario = document.getElementById("saudacaoUsuario");
+    const botaoSair = document.getElementById("botaoSair");
+
+    if (usuarioLogado) {
+        // Usuário logado: exibe saudação e botão de sair
+        saudacaoUsuario.textContent = "Olá, " + usuarioLogado.nome;
+        saudacaoUsuario.style.display = "inline-block";
+        botaoSair.style.display = "inline-block";
+    } else {
+        // Usuário não logado: oculta saudação e botão de sair
+        saudacaoUsuario.style.display = "none";
+        botaoSair.style.display = "none";
+    }
+}
+
+// Evento de clique no botão de sair
+document.getElementById("botaoSair").addEventListener("click", function() {
+    // Limpa o estado de login (simulação)
+    usuarioLogado = null;
+    atualizarBarraNavegacao(usuarioLogado);
+    alert("Você foi desconectado com sucesso!");
+});
+
+// Chamada inicial para atualizar a barra de navegação com base no estado de login atual
+atualizarBarraNavegacao(usuarioLogado);
