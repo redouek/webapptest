@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teste Saliva PRO - Seu Web App</title>
+    <title>Saliva PRO Exame Salivar</title>
     <style>
         /* Estilos CSS */
         /* Adicione os estilos conforme necessário */
@@ -15,7 +15,40 @@
         <label for="nomePaciente">Nome do Paciente:</label>
         <input type="text" id="nomePaciente" name="nomePaciente" required><br>
 
-        <!-- Adicione os campos das etapas do teste salivar conforme especificado -->
+        <!-- Etapa 1: Exame de Fluxo Salivar Não-Estimulado -->
+        <h2>Etapa 1: Exame de Fluxo Salivar Não-Estimulado</h2>
+        <label for="fluxoNaoEstimuladoData">Data:</label>
+        <input type="date" id="fluxoNaoEstimuladoData" name="fluxoNaoEstimuladoData" required><br>
+        <label for="fluxoNaoEstimuladoResultado">Resultado (ml/min):</label>
+        <input type="number" id="fluxoNaoEstimuladoResultado" name="fluxoNaoEstimuladoResultado" required><br>
+
+        <!-- Etapa 2: Exame de pH Salivar -->
+        <h2>Etapa 2: Exame de pH Salivar</h2>
+        <label for="phData">Data:</label>
+        <input type="date" id="phData" name="phData" required><br>
+        <label for="phResultado">Resultado:</label>
+        <input type="number" id="phResultado" name="phResultado" step="0.01" required><br>
+
+        <!-- Etapa 3: Exame de Fluxo Salivar Estimulado -->
+        <h2>Etapa 3: Exame de Fluxo Salivar Estimulado</h2>
+        <label for="fluxoEstimuladoData">Data:</label>
+        <input type="date" id="fluxoEstimuladoData" name="fluxoEstimuladoData" required><br>
+        <label for="fluxoEstimuladoResultado">Resultado (ml/min):</label>
+        <input type="number" id="fluxoEstimuladoResultado" name="fluxoEstimuladoResultado" required><br>
+
+        <!-- Etapa 4: Exame de Capacidade Tampão -->
+        <h2>Etapa 4: Exame de Capacidade Tampão</h2>
+        <label for="capacidadeTampaoData">Data:</label>
+        <input type="date" id="capacidadeTampaoData" name="capacidadeTampaoData" required><br>
+        <label for="capacidadeTampaoResultado">Resultado:</label>
+        <input type="number" id="capacidadeTampaoResultado" name="capacidadeTampaoResultado" step="0.01" required><br>
+
+        <!-- Etapa 5: Exames Complementares -->
+        <h2>Etapa 5: Exames Complementares</h2>
+        <label for="examesComplementaresData">Data:</label>
+        <input type="date" id="examesComplementaresData" name="examesComplementaresData" required><br>
+        <label for="examesComplementaresResultado">Resultado:</label>
+        <input type="number" id="examesComplementaresResultado" name="examesComplementaresResultado" step="0.01" required><br>
 
         <button type="submit">Enviar Dados</button>
     </form>
