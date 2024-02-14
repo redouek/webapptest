@@ -79,4 +79,14 @@ function analisarResultados() {
 // Evento de envio do formulário
 document.getElementById("testeSalivaForm").addEventListener("submit", function(event) {
    
+// Evento de envio do formulário
+document.getElementById("testeSalivaForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Impede o envio padrão do formulário
+
+    // Chamada da função para analisar os resultados do teste salivar
+    analisarResultados();
+    
+    // Limpa o formulário após o envio
+    this.reset();
+});
 
