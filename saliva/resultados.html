@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/logo.jpg" alt="Logo do Site">
+            </div>
+            <div class="date-time">
+                <!-- Inserir data e hora aqui -->
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="resultados">
+            <h1>Resultados</h1>
+            <div class="resultado-campo">
+                <h2>Exame de fluxo salivar não-estimulado:</h2>
+                <p>Resultado: <span id="resultado-fluxo"></span></p>
+            </div>
+            <div class="resultado-campo">
+                <h2>Exame de pH salivar:</h2>
+                <p>Resultado: <span id="resultado-ph"></span></p>
+            </div>
+            <div class="resultado-campo">
+                <h2>Exame de fluxo salivar estimulado:</h2>
+                <p>Resultado: <span id="resultado-fluxo-estimulado"></span></p>
+            </div>
+            <div class="resultado-campo">
+                <h2>Exame de capacidade tampão:</h2>
+                <p>Resultado: <span id="resultado-capacidade"></span></p>
+            </div>
+            <div class="resultado-campo">
+                <h2>Exames complementares:</h2>
+                <p>Resultado: <span id="resultado-complementares"></span></p>
+            </div>
+            <button onclick="imprimir()">Imprimir</button>
+            <button onclick="salvarPDF()">Salvar em PDF</button>
+            <button onclick="location.href='teste_saliva_pro.html'">Iniciar novo teste</button>
+        </section>
+    </main>
+    <footer>
+        <!-- Rodapé do site -->
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
