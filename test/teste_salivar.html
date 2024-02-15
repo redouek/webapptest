@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Salivar</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo-container">
+            <img src="https://redouek.github.io/webapptest/logosite.jpg" alt="Logo">
+        </div>
+    </header>
+    
+    <main class="content">
+        <section class="form">
+            <h2>Teste Saliva PRO</h2>
+            <form id="salivaForm">
+                <label for="patientName">Nome do paciente:</label>
+                <input type="text" id="patientName" name="patientName" required><br><br>
+
+                <label for="date">Data:</label>
+                <input type="date" id="date" name="date" required><br><br>
+
+                <label for="time">Hora:</label>
+                <input type="time" id="time" name="time" required><br><br>
+
+                <label for="location">Local:</label>
+                <input type="text" id="location" name="location" required><br><br>
+
+                <label for="unstimulatedFlow">Exame de fluxo salivar não-estimulado:</label>
+                <input type="number" id="unstimulatedFlow" name="unstimulatedFlow" step="any" placeholder="Resultado (ml/min)"><br><br>
+
+                <label for="phSaliva">Exame de pH salivar:</label>
+                <input type="number" id="phSaliva" name="phSaliva" step="any" placeholder="Resultado"><br><br>
+
+                <label for="stimulatedFlow">Exame de fluxo salivar estimulado:</label>
+                <input type="number" id="stimulatedFlow" name="stimulatedFlow" step="any" placeholder="Resultado (ml/min)"><br><br>
+
+                <label for="bufferCapacity">Exame de capacidade tampão:</label>
+                <input type="number" id="bufferCapacity" name="bufferCapacity" step="any" placeholder="Resultado"><br><br>
+
+                <label for="additionalTests">Exames complementares:</label>
+                <textarea id="additionalTests" name="additionalTests" placeholder="Insira aqui os resultados complementares"></textarea><br><br>
+
+                <button type="submit">Enviar dados</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
