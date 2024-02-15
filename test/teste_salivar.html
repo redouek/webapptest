@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teste Saliva PRO</title>
+    <title>Teste Saliva PRO 3</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js"></script>
     <style>
@@ -11,6 +11,8 @@
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
+            background-image: linear-gradient(to bottom, #004bab, #299dd2);
+            color: #ffffff;
         }
         
         header {
@@ -32,52 +34,51 @@
         }
         
         main {
-            padding-top: 70px; /* Ajuste de espaço para o conteúdo não ficar escondido sob o cabeçalho */
+            padding-top: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
         
-        footer {
-            background-color: #004bab;
-            color: #ffffff;
-            padding: 10px 0;
-            text-align: center;
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
+        .form-container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 600px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            width: 80%;
         }
-
+        
         .form-group {
             margin-bottom: 20px;
         }
-
+        
         .form-group label {
             display: block;
-            font-size: 16px;
+            font-size: 18px;
             margin-bottom: 5px;
-            color: #004bab;
         }
-
+        
         .form-group input,
         .form-group textarea {
-            width: 100%;
+            width: calc(100% - 20px);
             padding: 10px;
             border: 1px solid #cccccc;
             border-radius: 5px;
             font-size: 16px;
-            transition: border-color 0.3s;
+            margin-right: 10px;
         }
-
-        .form-group input:focus,
-        .form-group textarea:focus {
-            border-color: #004bab;
-            outline: none;
-        }
-
+        
         .form-group textarea {
             height: 150px;
             resize: none;
         }
-
+        
+        .form-group.button-group {
+            text-align: center;
+        }
+        
         .form-group button {
             padding: 10px 20px;
             background-color: #004bab;
@@ -86,11 +87,16 @@
             border-radius: 5px;
             cursor: pointer;
             font-size: 16px;
-            transition: background-color 0.3s;
         }
-
+        
         .form-group button:hover {
             background-color: #003366;
+        }
+
+        @media (max-width: 768px) {
+            .form-container {
+                width: 90%;
+            }
         }
     </style>
 </head>
@@ -101,8 +107,8 @@
         </div>
     </header>
     <main>
-        <section class="teste-saliva-pro" style="padding: 20px;">
-            <h1>Teste Saliva PRO</h1>
+        <div class="form-container">
+            <h1 style="text-align: center;">Teste Saliva PRO</h1>
             <form action="resultados.html" method="get">
                 <div class="form-group">
                     <label for="nome">Nome do paciente:</label>
@@ -111,8 +117,6 @@
                 <div class="form-group">
                     <label for="data">Data:</label>
                     <input type="date" id="data" name="data" required>
-                </div>
-                <div class="form-group">
                     <label for="hora">Hora:</label>
                     <input type="time" id="hora" name="hora" required>
                 </div>
@@ -123,10 +127,6 @@
                 <div class="form-group">
                     <label for="fluxo">Exame de fluxo salivar não-estimulado (ml/min):</label>
                     <input type="number" id="fluxo" name="fluxo" required>
-                </div>
-                <div class="form-group">
-                    <label for="ph">Exame de pH salivar:</label>
-                    <input type="number" id="ph" name="ph" required>
                 </div>
                 <div class="form-group">
                     <label for="fluxo_estimulado">Exame de fluxo salivar estimulado (ml/min):</label>
@@ -140,9 +140,11 @@
                     <label for="complementares">Exames complementares:</label>
                     <textarea id="complementares" name="complementares"></textarea>
                 </div>
-                <button type="submit">Enviar dados</button>
+                <div class="form-group button-group">
+                    <button type="submit">Enviar dados</button>
+                </div>
             </form>
-        </section>
+        </div>
     </main>
     <footer>
         <!-- Rodapé do site -->
