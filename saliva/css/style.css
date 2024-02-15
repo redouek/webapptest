@@ -1,0 +1,40 @@
+/* Estilos CSS para todo o site */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #004bab;
+    color: #ffffff;
+    padding: 10px 0;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo img {
+    width: 150px;
+    height: auto;
+}
+
+.date-time {
+    font-size: 14px;
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    background-color: #004bab;
+    color: #ffffff;
+    padding: 10px 0;
+    text-align: center;
+}
