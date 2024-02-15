@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resultados teste Salivar</title>
+    <title>Resultados</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         .result-container {
@@ -11,12 +11,32 @@
             padding: 20px;
             border-radius: 15px;
             border: 2px solid #3157A4;
-            margin: 20px;
+            margin: 20px auto;
+            max-width: 600px; /* Defina o tamanho máximo da moldura branca */
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
         .result-container h3 {
             color: #3157A4;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .button-container button {
+            background-color: #3157A4;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .button-container button:hover {
+            background-color: #3BA0D3;
         }
     </style>
 </head>
@@ -43,6 +63,10 @@
                 <p><strong>Exame de capacidade tampão:</strong> {bufferCapacityResult}</p>
                 <p><strong>Exames complementares:</strong> {additionalTests}</p>
             </div>
+        </div>
+        <div class="button-container">
+            <button onclick="window.print()">Imprimir</button>
+            <button onclick="window.location.href = 'index.html'">Iniciar novo teste</button>
         </div>
     </main>
 </body>
