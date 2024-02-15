@@ -1,0 +1,44 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Cores da marca */
+body {
+  background-color: #ffffff;
+  color: #3157A4;
+}
+
+h1 {
+  color: #3BA0D3;
+}
+
+/* Layout */
+p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Elementos interativos */
+button {
+  background-color: #3157A4;
+  color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* Tabelas */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
