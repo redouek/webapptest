@@ -5,38 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resultados</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .result-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 15px;
+            border: 2px solid #3157A4;
+            margin: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .result-container h3 {
+            color: #3157A4;
+        }
+    </style>
 </head>
 <body>
     <header class="header">
-        <div class="logo-container">
-            <img src="https://redouek.github.io/webapptest/logosite.jpg" alt="Logo">
-        </div>
+        <a href="index.html">
+            <div class="logo-container">
+                <img src="https://redouek.github.io/webapptest/logosite.jpg" alt="Logo">
+            </div>
+        </a>
     </header>
     
     <main class="content">
-        <section class="patient-info">
-            <h2>Informações do paciente</h2>
+        <div class="result-container">
+            <h3>Resultados do Teste Salivar</h3>
             <div>
-                <p>Nome: <span id="patientName"></span></p>
-                <p>Data: <span id="date"></span></p>
-                <p>Hora: <span id="time"></span></p>
-                <p>Local: <span id="location"></span></p>
+                <p><strong>Nome do paciente:</strong> {patientName}</p>
+                <p><strong>Data:</strong> {date}</p>
+                <p><strong>Hora:</strong> {time}</p>
+                <p><strong>Local:</strong> {location}</p>
+                <p><strong>Exame de fluxo salivar não-estimulado:</strong> {unstimulatedFlowResult}</p>
+                <p><strong>Exame de pH salivar:</strong> {phSalivaResult}</p>
+                <p><strong>Exame de fluxo salivar estimulado:</strong> {stimulatedFlowResult}</p>
+                <p><strong>Exame de capacidade tampão:</strong> {bufferCapacityResult}</p>
+                <p><strong>Exames complementares:</strong> {additionalTests}</p>
             </div>
-        </section>
-        <section class="results">
-            <h2>Resultados</h2>
-            <div>
-                <p>Exame de fluxo salivar não-estimulado: <span id="unstimulatedFlowResult"></span></p>
-                <p>Exame de pH salivar: <span id="phSalivaResult"></span></p>
-                <p>Exame de fluxo salivar estimulado: <span id="stimulatedFlowResult"></span></p>
-                <p>Exame de capacidade tampão: <span id="bufferCapacityResult"></span></p>
-                <p>Exames complementares: <span id="additionalTestsResult"></span></p>
-            </div>
-        </section>
-        <button onclick="window.print()">Imprimir</button>
-        <button onclick="location.href='teste_salivar.html'">Iniciar novo teste</button>
+        </div>
     </main>
-
-    <script src="script.js"></script>
 </body>
 </html>
