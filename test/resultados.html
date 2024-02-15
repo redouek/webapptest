@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo-container">
+            <img src="https://redouek.github.io/webapptest/logosite.jpg" alt="Logo">
+        </div>
+    </header>
+    
+    <main class="content">
+        <section class="patient-info">
+            <h2>Informações do paciente</h2>
+            <div>
+                <p>Nome: <span id="patientName"></span></p>
+                <p>Data: <span id="date"></span></p>
+                <p>Hora: <span id="time"></span></p>
+                <p>Local: <span id="location"></span></p>
+            </div>
+        </section>
+        <section class="results">
+            <h2>Resultados</h2>
+            <div>
+                <p>Exame de fluxo salivar não-estimulado: <span id="unstimulatedFlowResult"></span></p>
+                <p>Exame de pH salivar: <span id="phSalivaResult"></span></p>
+                <p>Exame de fluxo salivar estimulado: <span id="stimulatedFlowResult"></span></p>
+                <p>Exame de capacidade tampão: <span id="bufferCapacityResult"></span></p>
+                <p>Exames complementares: <span id="additionalTestsResult"></span></p>
+            </div>
+        </section>
+        <button onclick="window.print()">Imprimir</button>
+        <button onclick="location.href='teste_salivar.html'">Iniciar novo teste</button>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
