@@ -6,20 +6,55 @@
     <title>Exame Salivar</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        
+        header {
+            background-color: #ffffff;
+            padding: 10px 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        
+        .logo {
+            text-align: center;
+        }
+        
+        .logo img {
+            width: 150px;
+        }
+        
+        main {
+            padding-top: 70px; /* Ajuste de espaço para o conteúdo não ficar escondido sob o cabeçalho */
+        }
+        
+        footer {
+            background-color: #004bab;
+            color: #ffffff;
+            padding: 10px 0;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
-    <header style="background: linear-gradient(to right, #004bab, #299dd2);">
-        <nav>
-            <div class="logo">
-                <a href="index.html"><img src="https://redouek.github.io/webapptest/saliva/logosite.jpg" alt="Logo do Site"></a>
-            </div>
-            <div class="date-time">
-                <!-- Inserir data e hora aqui -->
-            </div>
-        </nav>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="https://redouek.github.io/webapptest/saliva/logosite.jpg" alt="Logo do Site"></a>
+        </div>
     </header>
     <main>
-        <section class="exame-salivar">
+        <section class="exame-salivar" style="padding: 20px;">
             <h1>Exame Salivar</h1>
             <p>A saliva é fluido corporal indispensável para o controle e manutenção da saúde tanto bucal como do corpo. As funções salivares são inúmeras como: controle de pH bucal e da orofaringe, lubrificação e umidificação, auxílio no início da digestão, controle do acúmulo de placa bacteriana, auxílio na imunidade e resposta anti-inflamatória. Dessa forma, manter um padrão salivar adequado é muito importante e reflete diretamente na durabilidade das restaurações estéticas, controle de inflamação gengival, qualidade do hálito, formação de bolo alimentar, conforto bucal entre outros benefícios.</p>
             <p>Hoje realizamos o exame salivar para conferir a quantidade, qualidade, pH e capacidade tampão de sua saliva (veja valores referenciais no laudo em anexo).</p>
@@ -27,7 +62,7 @@
             <button onclick="location.href='teste_saliva_pro.html'">Iniciar teste</button>
         </section>
     </main>
-    <footer style="background: linear-gradient(to right, #004bab, #299dd2);">
+    <footer>
         <!-- Rodapé do site -->
     </footer>
 </body>
