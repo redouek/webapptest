@@ -34,19 +34,15 @@
     <footer>
         <!-- Rodapé do site -->
     </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="js/script.js"></script>
     <script>
         function imprimir() {
             window.print();
         }
 
         function salvarPDF() {
-            const doc = new jsPDF();
-            // Adicione a lógica para adicionar conteúdo ao PDF aqui
-            doc.text(20, 20, 'Exame de fluxo salivar não-estimulado:');
-            doc.text(20, 30, 'Resultado: 0.1 ml/min');
-            // Salve o PDF com um nome específico
-            doc.save('resultados.pdf');
+            // Lógica para salvar como PDF
+            alert("Função de salvar PDF ainda não implementada.");
         }
     </script>
 </body>
