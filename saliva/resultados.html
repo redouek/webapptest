@@ -24,22 +24,8 @@
                 <h2>Exame de fluxo salivar não-estimulado:</h2>
                 <p>Resultado: <span id="resultado-fluxo"></span></p>
             </div>
-            <div class="resultado-campo">
-                <h2>Exame de pH salivar:</h2>
-                <p>Resultado: <span id="resultado-ph"></span></p>
-            </div>
-            <div class="resultado-campo">
-                <h2>Exame de fluxo salivar estimulado:</h2>
-                <p>Resultado: <span id="resultado-fluxo-estimulado"></span></p>
-            </div>
-            <div class="resultado-campo">
-                <h2>Exame de capacidade tampão:</h2>
-                <p>Resultado: <span id="resultado-capacidade"></span></p>
-            </div>
-            <div class="resultado-campo">
-                <h2>Exames complementares:</h2>
-                <p>Resultado: <span id="resultado-complementares"></span></p>
-            </div>
+            <!-- Adicione os outros campos de resultados aqui -->
+
             <button onclick="imprimir()">Imprimir</button>
             <button onclick="salvarPDF()">Salvar em PDF</button>
             <button onclick="location.href='teste_saliva_pro.html'">Iniciar novo teste</button>
@@ -49,5 +35,15 @@
         <!-- Rodapé do site -->
     </footer>
     <script src="js/script.js"></script>
+    <script>
+        function imprimir() {
+            window.print();
+        }
+
+        function salvarPDF() {
+            // Lógica para salvar como PDF
+            alert("Função de salvar PDF ainda não implementada.");
+        }
+    </script>
 </body>
 </html>
