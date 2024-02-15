@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const bufferCapacity = parseFloat(formData.get("bufferCapacity"));
         const additionalTests = formData.get("additionalTests");
 
-        // Análise dos resultados
+        // Analisar os resultados
         let unstimulatedFlowResult = "";
         if (unstimulatedFlow <= 0.1) {
             unstimulatedFlowResult = "hipossalivação";
