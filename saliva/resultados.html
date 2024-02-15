@@ -7,10 +7,10 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
+    <header style="background: linear-gradient(to right, #004bab, #299dd2);">
         <nav>
             <div class="logo">
-                <img src="https://redouek.github.io/webapptest/saliva/logosite.jpg" alt="Logo do Site">
+                <a href="index.html"><img src="https://redouek.github.io/webapptest/saliva/logosite.jpg" alt="Logo do Site"></a>
             </div>
             <div class="date-time">
                 <!-- Inserir data e hora aqui -->
@@ -20,18 +20,13 @@
     <main>
         <section class="resultados">
             <h1>Resultados</h1>
-            <div class="resultado-campo">
-                <h2>Exame de fluxo salivar não-estimulado:</h2>
-                <p>Resultado: <span id="resultado-fluxo"></span></p>
-            </div>
-            <!-- Adicione os outros campos de resultados aqui -->
-
+            <!-- Conteúdo dos resultados -->
             <button onclick="imprimir()">Imprimir</button>
             <button onclick="salvarPDF()">Salvar em PDF</button>
             <button onclick="location.href='teste_saliva_pro.html'">Iniciar novo teste</button>
         </section>
     </main>
-    <footer>
+    <footer style="background: linear-gradient(to right, #004bab, #299dd2);">
         <!-- Rodapé do site -->
     </footer>
     <script src="js/script.js"></script>
