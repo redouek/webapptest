@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resultados padding</title>
+    <title>Resultados padding ok</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         .result-container {
@@ -51,7 +51,28 @@
         </a>
     </header>
     
-    <main class="content">
+<main class="content" style="
+    padding-top: 20px;
+    padding-bottom: 20px;">
+        <div class="result-container">
+            <h3>Resultados do Teste Salivar</h3>
+            <div>
+                <p><strong>Nome do paciente:</strong> {patientName}</p>
+                <p><strong>Data:</strong> {date}</p>
+                <p><strong>Hora:</strong> {time}</p>
+                <p><strong>Local:</strong> {location}</p>
+                <p><strong>Exame de fluxo salivar não-estimulado:</strong> {unstimulatedFlowResult}</p>
+                <p><strong>Exame de pH salivar:</strong> {phSalivaResult}</p>
+                <p><strong>Exame de fluxo salivar estimulado:</strong> {stimulatedFlowResult}</p>
+                <p><strong>Exame de capacidade tampão:</strong> {bufferCapacityResult}</p>
+                <p><strong>Exames complementares:</strong> {additionalTests}</p>
+            </div>
+        </div>
+        <div class="button-container">
+            <button onclick="window.print()">Imprimir</button>
+            <button onclick="window.location.href = 'index.html'">Iniciar novo teste</button>
+        </div>
+    </main>
         <div class="result-container">
             <h3>Resultados do Teste Salivar</h3>
             <div>
