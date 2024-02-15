@@ -1,96 +1,84 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resultados padding ok</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Resultados</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
     <style>
-        .result-container {
-            background-color: #fff;
-            padding: 20px;
-            padding-top: 20px;
-            padding-bottom: 20px;
-            border-radius: 15px;
-            border: 2px solid #3157A4;
-            margin: 20px auto;
-            max-width: 600px; /* Defina o tamanho máximo da moldura branca */
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
         }
-
-        .result-container h3 {
-            color: #3157A4;
+        
+        header {
+            background-color: #ffffff;
+            padding: 10px 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
         }
-
-        .button-container {
+        
+        .logo {
             text-align: center;
-            margin-top: 20px;
         }
-
-        .button-container button {
-            background-color: #3157A4;
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
+        
+        .logo img {
+            width: 150px;
         }
-
-        .button-container button:hover {
-            background-color: #3BA0D3;
+        
+        main {
+            padding-top: 70px; /* Ajuste de espaço para o conteúdo não ficar escondido sob o cabeçalho */
+        }
+        
+        footer {
+            background-color: #004bab;
+            color: #ffffff;
+            padding: 10px 0;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
         }
     </style>
 </head>
 <body>
-    <header class="header">
-        <a href="index.html">
-            <div class="logo-container">
-                <img src="https://redouek.github.io/webapptest/logosite.jpg" alt="Logo">
-            </div>
-        </a>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="https://redouek.github.io/webapptest/saliva/logosite.jpg" alt="Logo do Site"></a>
+        </div>
     </header>
-    
-<main class="content" style="
-    padding-top: 20px;
-    padding-bottom: 20px;">
-        <div class="result-container">
-            <h3>Resultados do Teste Salivar</h3>
+    <main>
+        <section class="resultados" style="padding: 20px;">
+            <h1>Resultados</h1>
+            <!-- Conteúdo dos resultados -->
             <div>
-                <p><strong>Nome do paciente:</strong> {patientName}</p>
-                <p><strong>Data:</strong> {date}</p>
-                <p><strong>Hora:</strong> {time}</p>
-                <p><strong>Local:</strong> {location}</p>
-                <p><strong>Exame de fluxo salivar não-estimulado:</strong> {unstimulatedFlowResult}</p>
-                <p><strong>Exame de pH salivar:</strong> {phSalivaResult}</p>
-                <p><strong>Exame de fluxo salivar estimulado:</strong> {stimulatedFlowResult}</p>
-                <p><strong>Exame de capacidade tampão:</strong> {bufferCapacityResult}</p>
-                <p><strong>Exames complementares:</strong> {additionalTests}</p>
+                <h2>Informações do Paciente</h2>
+                <p>Nome do paciente: {patientName}</p>
+                <p>Data: {data}</p>
+                <p>Hora: {hora}</p>
+                <p>Local: {local}</p>
             </div>
-        </div>
-        <div class="button-container">
-            <button onclick="window.print()">Imprimir</button>
-            <button onclick="window.location.href = 'index.html'">Iniciar novo teste</button>
-        </div>
-    </main>
-        <div class="result-container">
-            <h3>Resultados do Teste Salivar</h3>
             <div>
-                <p><strong>Nome do paciente:</strong> {patientName}</p>
-                <p><strong>Data:</strong> {date}</p>
-                <p><strong>Hora:</strong> {time}</p>
-                <p><strong>Local:</strong> {location}</p>
-                <p><strong>Exame de fluxo salivar não-estimulado:</strong> {unstimulatedFlowResult}</p>
-                <p><strong>Exame de pH salivar:</strong> {phSalivaResult}</p>
-                <p><strong>Exame de fluxo salivar estimulado:</strong> {stimulatedFlowResult}</p>
-                <p><strong>Exame de capacidade tampão:</strong> {bufferCapacityResult}</p>
-                <p><strong>Exames complementares:</strong> {additionalTests}</p>
+                <h2>Resultados dos Exames</h2>
+                <p>Exame de fluxo salivar não-estimulado: {fluxoSalivar}</p>
+                <p>Exame de pH salivar: {phSalivar}</p>
+                <p>Exame de fluxo salivar estimulado: {fluxoEstimulado}</p>
+                <p>Exame de capacidade tampão: {capacidadeTampao}</p>
+                <p>Exames complementares: {examesComplementares}</p>
             </div>
-        </div>
-        <div class="button-container">
-            <button onclick="window.print()">Imprimir</button>
-            <button onclick="window.location.href = 'index.html'">Iniciar novo teste</button>
-        </div>
+            <button onclick="imprimir()">Imprimir</button>
+            <button onclick="salvarPDF()">Salvar em PDF</button>
+            <button onclick="location.href='teste_saliva_pro.html'">Iniciar novo teste</button>
+        </section>
     </main>
+    <footer>
+        <!-- Rodapé do site -->
+    </footer>
 </body>
 </html>
