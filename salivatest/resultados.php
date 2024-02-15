@@ -26,7 +26,7 @@ $exames_complementares = $_GET['exames_complementares'];
 </head>
 <body>
   <header>
-    <img src="logo.jpg" alt="Logo">
+    <img src="https://redouek.github.io/webapptest/logosite.jpg" alt="Logo">
   </header>
   <main>
     <h1>Resultados do Exame Saliva PRO</h1>
