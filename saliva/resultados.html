@@ -6,25 +6,69 @@
     <title>Resultados</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        
+        header {
+            background-color: #ffffff;
+            padding: 10px 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        
+        .logo {
+            text-align: center;
+        }
+        
+        .logo img {
+            width: 150px;
+        }
+        
+        main {
+            padding-top: 70px; /* Ajuste de espaço para o conteúdo não ficar escondido sob o cabeçalho */
+        }
+        
+        footer {
+            background-color: #004bab;
+            color: #ffffff;
+            padding: 10px 0;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
-    <header style="background: linear-gradient(to right, #004bab, #299dd2);">
-        <nav>
-            <div class="logo">
-                <a href="index.html"><img src="https://redouek.github.io/webapptest/saliva/logosite.jpg" alt="Logo do Site"></a>
-            </div>
-            <div class="date-time">
-                <!-- Inserir data e hora aqui -->
-            </div>
-        </nav>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="https://redouek.github.io/webapptest/saliva/logosite.jpg" alt="Logo do Site"></a>
+        </div>
     </header>
     <main>
-        <section class="resultados">
+        <section class="resultados" style="padding: 20px;">
             <h1>Resultados</h1>
             <!-- Conteúdo dos resultados -->
+            <p>Exame de fluxo salivar não-estimulado: [resultado]</p>
+            <p>Exame de pH salivar: [resultado]</p>
+            <p>Exame de fluxo salivar estimulado: [resultado]</p>
+            <p>Exame de capacidade tampão: [resultado]</p>
+            <p>Exames complementares: [resultado]</p>
             <button onclick="imprimir()">Imprimir</button>
             <button onclick="salvarPDF()">Salvar em PDF</button>
             <button onclick="location.href='teste_saliva_pro.html'">Iniciar novo teste</button>
         </section>
     </main>
-    <footer style="background:
+    <footer>
+        <!-- Rodapé do site -->
+    </footer>
+</body>
+</html>
