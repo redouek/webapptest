@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teste Saliva PRO 2</title>
+    <title>Teste Saliva PRO</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js"></script>
     <style>
@@ -54,23 +54,28 @@
             display: block;
             font-size: 16px;
             margin-bottom: 5px;
+            color: #004bab;
         }
 
-        .form-group input {
+        .form-group input,
+        .form-group textarea {
             width: 100%;
             padding: 10px;
             border: 1px solid #cccccc;
             border-radius: 5px;
             font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: #004bab;
+            outline: none;
         }
 
         .form-group textarea {
-            width: 100%;
             height: 150px;
-            padding: 10px;
-            border: 1px solid #cccccc;
-            border-radius: 5px;
-            font-size: 16px;
+            resize: none;
         }
 
         .form-group button {
@@ -81,6 +86,7 @@
             border-radius: 5px;
             cursor: pointer;
             font-size: 16px;
+            transition: background-color 0.3s;
         }
 
         .form-group button:hover {
@@ -100,35 +106,35 @@
             <form action="resultados.html" method="get">
                 <div class="form-group">
                     <label for="nome">Nome do paciente:</label>
-                    <input type="text" id="nome" name="nome">
+                    <input type="text" id="nome" name="nome" required>
                 </div>
                 <div class="form-group">
                     <label for="data">Data:</label>
-                    <input type="date" id="data" name="data">
+                    <input type="date" id="data" name="data" required>
                 </div>
                 <div class="form-group">
                     <label for="hora">Hora:</label>
-                    <input type="time" id="hora" name="hora">
+                    <input type="time" id="hora" name="hora" required>
                 </div>
                 <div class="form-group">
                     <label for="local">Local:</label>
-                    <input type="text" id="local" name="local">
+                    <input type="text" id="local" name="local" required>
                 </div>
                 <div class="form-group">
                     <label for="fluxo">Exame de fluxo salivar não-estimulado (ml/min):</label>
-                    <input type="number" id="fluxo" name="fluxo">
+                    <input type="number" id="fluxo" name="fluxo" required>
                 </div>
                 <div class="form-group">
                     <label for="ph">Exame de pH salivar:</label>
-                    <input type="number" id="ph" name="ph">
+                    <input type="number" id="ph" name="ph" required>
                 </div>
                 <div class="form-group">
                     <label for="fluxo_estimulado">Exame de fluxo salivar estimulado (ml/min):</label>
-                    <input type="number" id="fluxo_estimulado" name="fluxo_estimulado">
+                    <input type="number" id="fluxo_estimulado" name="fluxo_estimulado" required>
                 </div>
                 <div class="form-group">
                     <label for="capacidade">Exame de capacidade tampão:</label>
-                    <input type="number" id="capacidade" name="capacidade">
+                    <input type="number" id="capacidade" name="capacidade" required>
                 </div>
                 <div class="form-group">
                     <label for="complementares">Exames complementares:</label>
